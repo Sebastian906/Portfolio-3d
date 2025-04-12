@@ -4,7 +4,7 @@ const App = () => {
     return (
         <main>
             <div>
-                <h1>Bienvenidos a mi Portfolio 3D</h1>
+                <h1 className='text-3xl underline'>Bienvenidos a mi Portfolio 3D</h1>
             </div>
         </main>
     )
