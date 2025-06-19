@@ -33,10 +33,10 @@ const getWords = () => [
 
 // Función para obtener los items del contador traducidos
 const getCounterItems = () => [
-    { value: 15, suffix: "+", label: i18n.t("counter.yearsExperience") },
-    { value: 200, suffix: "+", label: i18n.t("counter.satisfiedClients") },
-    { value: 108, suffix: "+", label: i18n.t("counter.completedProjects") },
-    { value: 90, suffix: "%", label: i18n.t("counter.clientRetentionRate") },
+    { value: 7, suffix: "+", label: i18n.t("counter.yearsExperience") },
+    { value: 50, suffix: "+", label: i18n.t("counter.satisfiedClients") },
+    { value: 45, suffix: "+", label: i18n.t("counter.completedProjects") },
+    { value: 85, suffix: "%", label: i18n.t("counter.clientRetentionRate") },
 ];
 
 const logoIconsList = [
