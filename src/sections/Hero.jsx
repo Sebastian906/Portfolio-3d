@@ -1,9 +1,14 @@
 import React from 'react'
-import { words } from '../constants'
+import { useTranslation } from 'react-i18next'
+import { getWords } from '../constants'
 import Button from '../components/Button'
 import HeroExperience from '../components/HeroModels/HeroExperience'
 
 const Hero = () => {
+
+    const { t } = useTranslation();
+    const words = getWords(); 
+
     return (
         <section id="hero" className="relative overflow-hidden">
             <div className="absolute top-0 left-0 z-10">
@@ -16,11 +21,11 @@ const Hero = () => {
                     <div className="flex flex-col gap-7">
                         <div className="hero-text">
                             <h1>
-                                Shaping
+                                {t('hero.shaping')}
                                 <span className="slide">
                                     <span className="wrapper">
-                                        {words.map((word) => (
-                                            <span key={word.text} className="flex items-center md:gap-3 gap-1 pb-2">
+                                        {words.map((word, index) => (
+                                            <span key={`${word.text}-${index}`} className="flex items-center md:gap-3 gap-1 pb-2">
                                                 <img 
                                                     src={word.imgPath} 
                                                     alt={word.text}
@@ -32,13 +37,13 @@ const Hero = () => {
                                     </span>
                                 </span>
                             </h1>
-                            <h1>into Real Projects</h1>
-                            <h1>that Deliver Results</h1>
+                            <h1>{t('hero.intoRealProjects')}</h1>
+                            <h1>{t('hero.thatDeliverResults')}</h1>
                         </div>
                         <p className="text-indigo-100 md:text-xl relative z-10 pointer-events-none">
-                            Hi, i'm Sebastián, a developer based in Colombia, with a passion for code.
+                            {t('hero.description')}
                         </p>
-                        <Button className="md:w-80 md:h-16 w-60 h-12" id="button" text="See my work"/>
+                        <Button className="md:w-80 md:h-16 w-60 h-12" id="button" text={t('hero.seeMyWork')}/>
                     </div>
                 </header>
                 {/** RIGHT: 3D MODEL */}

@@ -1,38 +1,42 @@
+import i18n from '../i18n';
+
 const navLinks = [
     {
-        name: "Work",
+        name: "nav.work",
         link: "#work",
     },
     {
-        name: "Experience",
+        name: "nav.experience", 
         link: "#experience",
     },
     {
-        name: "Skills",
+        name: "nav.skills",
         link: "#skills",
     },
     {
-        name: "Testimonials",
+        name: "nav.testimonials",
         link: "#testimonials",
     },
 ];
 
-const words = [
-    { text: "Ideas", imgPath: "/images/ideas.svg" },
-    { text: "Concepts", imgPath: "/images/concepts.svg" },
-    { text: "Designs", imgPath: "/images/designs.svg" },
-    { text: "Code", imgPath: "/images/code.svg" },
-    { text: " Ideas", imgPath: "/images/ideas.svg" },
-    { text: " Concepts", imgPath: "/images/concepts.svg" },
-    { text: " Designs", imgPath: "/images/designs.svg" },
-    { text: " Code", imgPath: "/images/code.svg" },
+// Función para obtener las palabras traducidas
+const getWords = () => [
+    { text: i18n.t("words.ideas"), imgPath: "/images/ideas.svg" },
+    { text: i18n.t("words.concepts"), imgPath: "/images/concepts.svg" },
+    { text: i18n.t("words.designs"), imgPath: "/images/designs.svg" },
+    { text: i18n.t("words.code"), imgPath: "/images/code.svg" },
+    { text: ` ${i18n.t("words.ideas")}`, imgPath: "/images/ideas.svg" },
+    { text: ` ${i18n.t("words.concepts")}`, imgPath: "/images/concepts.svg" },
+    { text: ` ${i18n.t("words.designs")}`, imgPath: "/images/designs.svg" },
+    { text: ` ${i18n.t("words.code")}`, imgPath: "/images/code.svg" },
 ];
 
-const counterItems = [
-    { value: 15, suffix: "+", label: "Years of Experience" },
-    { value: 200, suffix: "+", label: "Satisfied Clients" },
-    { value: 108, suffix: "+", label: "Completed Projects" },
-    { value: 90, suffix: "%", label: "Client Retention Rate" },
+// Función para obtener los items del contador traducidos
+const getCounterItems = () => [
+    { value: 15, suffix: "+", label: i18n.t("counter.yearsExperience") },
+    { value: 200, suffix: "+", label: i18n.t("counter.satisfiedClients") },
+    { value: 108, suffix: "+", label: i18n.t("counter.completedProjects") },
+    { value: 90, suffix: "%", label: i18n.t("counter.clientRetentionRate") },
 ];
 
 const logoIconsList = [
@@ -71,21 +75,22 @@ const logoIconsList = [
     },
 ];
 
-const abilities = [
+// Función para obtener las habilidades traducidas
+const getAbilities = () => [
     {
         imgPath: "/images/seo.png",
-        title: "Quality Focus",
-        desc: "Delivering high-quality results while maintaining attention to every detail.",
+        title: i18n.t("abilities.qualityFocus.title"),
+        desc: i18n.t("abilities.qualityFocus.desc"),
     },
     {
         imgPath: "/images/chat.png",
-        title: "Reliable Communication",
-        desc: "Keeping you updated at every step to ensure transparency and clarity.",
+        title: i18n.t("abilities.reliableCommunication.title"),
+        desc: i18n.t("abilities.reliableCommunication.desc"),
     },
     {
         imgPath: "/images/time.png",
-        title: "On-Time Delivery",
-        desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+        title: i18n.t("abilities.onTimeDelivery.title"),
+        desc: i18n.t("abilities.onTimeDelivery.desc"),
     },
 ];
 
@@ -159,7 +164,7 @@ const expCards = [
         ],
     },
     {
-        review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+        review: "Adrian's contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
         imgPath: "/images/exp2.png",
         logoPath: "/images/logo2.png",
         title: "Full Stack Developer",
@@ -171,7 +176,7 @@ const expCards = [
         ],
     },
     {
-        review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+        review: "Adrian's work on Appwrite's mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
         imgPath: "/images/exp3.png",
         logoPath: "/images/logo3.png",
         title: "React Native Developer",
@@ -204,7 +209,7 @@ const testimonials = [
         name: "Esther Howard",
         mentions: "@estherhoward",
         review:
-            "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+            "I can't say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
         imgPath: "/images/client1.png",
     },
     {
@@ -225,14 +230,14 @@ const testimonials = [
         name: "Marvin McKinney",
         mentions: "@marvinmckinney",
         review:
-            "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
+            "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that's both modern and easy to navigate. Fantastic work overall.",
         imgPath: "/images/client5.png",
     },
     {
         name: "Floyd Miles",
         mentions: "@floydmiles",
         review:
-            "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
+            "Adrian's expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He's a true professional!",
         imgPath: "/images/client4.png",
     },
     {
@@ -264,10 +269,10 @@ const socialImgs = [
 ];
 
 export {
-    words,
-    abilities,
+    getWords,
+    getAbilities,
+    getCounterItems,
     logoIconsList,
-    counterItems,
     expCards,
     expLogos,
     testimonials,
